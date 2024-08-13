@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Create Profile</h2>
+        <form id="createProfileForm">
+            <div>
+                <label for="userName">Username:</label>
+                <input id="userName" type="text" name="userName" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input id="createEmail" type="email" name="email" required>
+                <small class="error" id="createEmailError"></small>
+            </div>
+            <div>
+                <label for="mobileNumber">Mobile Number:</label>
+                <input id="createMobileNumber" type="text" name="mobileNumber" required pattern="^[0-9]{10}$">
+                <small class="error" id="createMobileNumberError"></small>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input id="createPassword" type="password" name="password" required minlength="10">
+            </div>
+            <button type="submit">Create Profile</button>
+        </form>
+
+        <hr>
+
+        <h2>Reset Password</h2>
+        <form id="resetPasswordForm">
+            <div>
+                <label for="resetEmail">Email:</label>
+                <input id="resetEmail" type="email" name="email">
+                <small class="error" id="resetEmailError"></small>
+            </div>
+            <div>
+                <label for="resetMobileNumber">Mobile Number:</label>
+                <input id="resetMobileNumber" type="text" name="mobileNumber" pattern="^[0-9]{10}$">
+                <small class="error" id="resetMobileNumberError"></small>
+            </div>
+            <div>
+                <label for="newPassword">New Password:</label>
+                <input id="newPassword" type="password" name="newPassword" required minlength="10">
+                <small class="error" id="newPasswordError"></small>
+            </div>
+            <div>
+                <label for="retypePassword">Retype Password:</label>
+                <input id="retypePassword" type="password" name="retypePassword" required minlength="10">
+                <small class="error" id="retypePasswordError"></small>
+            </div>
+            <button type="submit">Reset Password</button>
+        </form>
+
+        <div id="message"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
