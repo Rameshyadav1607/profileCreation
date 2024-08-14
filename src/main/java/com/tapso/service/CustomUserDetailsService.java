@@ -5,10 +5,11 @@ import java.util.ArrayList;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
 
 import com.tapso.model.User;
 import com.tapso.repository.UserRepository;
-
+@Service
 public class CustomUserDetailsService implements UserDetailsService{
 	  private UserRepository userRepository;
 
